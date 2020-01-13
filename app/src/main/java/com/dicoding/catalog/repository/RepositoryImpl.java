@@ -9,21 +9,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.dicoding.catalog.db.contract.DatabaseContract;
 import com.dicoding.catalog.db.helper.DatabaseHelper;
 
-public class RepositoriImpl implements Repository {
+public class RepositoryImpl implements Repository {
     private static DatabaseHelper databaseHelper;
     private static SQLiteDatabase database;
 
-    private static RepositoriImpl INSTANCE;
+    private static RepositoryImpl INSTANCE;
 
-    private RepositoriImpl(Context context){
+    private RepositoryImpl(Context context){
         databaseHelper = new DatabaseHelper(context);
     }
 
-    public static RepositoriImpl getInstance(Context context){
+    public static RepositoryImpl getInstance(Context context){
         if (INSTANCE == null){
             synchronized (SQLiteOpenHelper.class){
                 if (INSTANCE == null){
-                    INSTANCE = new RepositoriImpl(context);
+                    INSTANCE = new RepositoryImpl(context);
                 }
             }
         }
