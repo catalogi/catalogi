@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Catalog</string>
+    <string name="title_movies">Judul Film</string>
+    <string name="lorem">lorem ipsum dolor sit amet</string>
+    <string name="date">1 Januari 1999</string>
+    <string name="movies">Film</string>
+    <string name="tv_shows">Acara TV</string>
+    <string name="movies_photo">Poster Film</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="favorite">Favorit</string>
+</resources>
