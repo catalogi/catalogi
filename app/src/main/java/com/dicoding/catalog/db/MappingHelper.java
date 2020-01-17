@@ -1,10 +1,9 @@
-package com.dicoding.catalog.db.helper;
+package com.dicoding.catalog.db;
 
 import android.database.Cursor;
 
-import com.dicoding.catalog.db.contract.DatabaseContract;
-import com.dicoding.catalog.entity.Movie;
-import com.dicoding.catalog.entity.MovieBuilder;
+import com.dicoding.catalog.entitas.Movie;
+import com.dicoding.catalog.entitas.MovieBuilder;
 
 import java.util.ArrayList;
 

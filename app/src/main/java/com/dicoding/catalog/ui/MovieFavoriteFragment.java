@@ -13,9 +13,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.dicoding.catalog.R;
 import com.dicoding.catalog.adapter.ListMovieAdapter;
-import com.dicoding.catalog.entity.Movie;
 import com.dicoding.catalog.repository.Repository;
-import com.dicoding.catalog.repository.RepositoryImpl;
+import com.dicoding.catalog.repository.ImplementRepo;
 import com.dicoding.catalog.service.LoadDataCallback;
 
 public class MovieFavoriteFragment extends Fragment implements LoadDataCallback {
@@ -37,7 +36,7 @@ public class MovieFavoriteFragment extends Fragment implements LoadDataCallback 
         super.onViewCreated(view, saveInstanceState);
 
         progressBar = view.findViewById(R.id.progressbar_favorite_movie);
-        repository = RepositoryImpl.getInstance(view.getContext());
+        repository = ImplementRepo.getInstance(view.getContext());
 
         movieViewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(movieViewModel.class);
 

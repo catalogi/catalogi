@@ -3,9 +3,9 @@ package com.dicoding.catalog.service;
 import android.database.Cursor;
 import android.os.AsyncTask;
 
-import com.dicoding.catalog.db.contract.DatabaseContract;
-import com.dicoding.catalog.db.helper.MappingHelper;
-import com.dicoding.catalog.entity.Movie;
+import com.dicoding.catalog.db.DatabaseContract;
+import com.dicoding.catalog.db.MappingHelper;
+import com.dicoding.catalog.entitas.Movie;
 import com.dicoding.catalog.repository.Repository;
 
 import java.lang.ref.WeakReference;

@@ -1,6 +1,6 @@
 package com.dicoding.catalog.service;
 
-import com.dicoding.catalog.entity.Movie;
+import com.dicoding.catalog.entitas.Movie;
 
 import java.util.ArrayList;
 

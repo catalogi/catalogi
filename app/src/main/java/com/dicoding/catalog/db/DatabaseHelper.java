@@ -1,10 +1,10 @@
-package com.dicoding.catalog.db.helper;
+package com.dicoding.catalog.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.dicoding.catalog.db.contract.DatabaseContract;
+import com.dicoding.catalog.db.DatabaseContract;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 

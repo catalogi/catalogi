@@ -6,24 +6,24 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.dicoding.catalog.db.contract.DatabaseContract;
-import com.dicoding.catalog.db.helper.DatabaseHelper;
+import com.dicoding.catalog.db.DatabaseContract;
+import com.dicoding.catalog.db.DatabaseHelper;
 
-public class RepositoryImpl implements Repository {
+public class ImplementRepo implements Repository {
     private static DatabaseHelper databaseHelper;
     private static SQLiteDatabase database;
 
-    private static RepositoryImpl INSTANCE;
+    private static ImplementRepo INSTANCE;
 
-    private RepositoryImpl(Context context){
+    private ImplementRepo(Context context){
         databaseHelper = new DatabaseHelper(context);
     }
 
-    public static RepositoryImpl getInstance(Context context){
+    public static ImplementRepo getInstance(Context context){
         if (INSTANCE == null){
             synchronized (SQLiteOpenHelper.class){
                 if (INSTANCE == null){
-                    INSTANCE = new RepositoryImpl(context);
+                    INSTANCE = new ImplementRepo(context);
                 }
             }
         }

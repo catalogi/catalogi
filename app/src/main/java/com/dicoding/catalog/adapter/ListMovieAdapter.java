@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.dicoding.catalog.DetailActivity;
 import com.dicoding.catalog.R;
-import com.dicoding.catalog.entity.Movie;
+import com.dicoding.catalog.entitas.Movie;
 
 import java.util.ArrayList;
 
@@ -55,7 +55,7 @@ public class ListMovieAdapter extends RecyclerView.Adapter<ListMovieAdapter.List
         holder.tvDescription.setText(movie.getDescription());
         holder.tvDate.setText(movie.getDate());
 
-        holder.itemView.setOnClickListener(new CustomOnClickListener(position, new CustomOnClickListener.OnItemClickCallback() {
+        holder.itemView.setOnClickListener(new OnClickListener(position, new OnClickListener.OnItemClickCallback() {
             @Override
             public void onItemClicked(View view, int position) {
                 Intent intent = new Intent(activity, DetailActivity.class);
