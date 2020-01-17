@@ -36,6 +36,9 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0-rc03'
     annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.2.0-rc03'
     implementation 'com.loopj.android:android-async-http:1.4.9'
+    //noinspection GradleCompatible
+    implementation  'com.android.support:cardview-v7:28.0.0'
+
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'

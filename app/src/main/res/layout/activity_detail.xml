@@ -38,16 +38,16 @@
 
         <ImageView
             android:id="@+id/img_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="395dp"
+            android:layout_height="198dp"
             android:contentDescription="@string/movies_photo" />
 
         <TextView
             android:id="@+id/tv_title_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/img_detail"
-            android:layout_marginStart="16dp"
+            android:layout_below="@+id/img_detail"
+            android:layout_marginTop="20dp"
             android:text="@string/title_movies"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -58,16 +58,16 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_title_detail"
             android:layout_marginStart="16dp"
-            android:layout_toEndOf="@id/img_detail"
+            android:layout_marginTop="4dp"
             android:text="@string/date" />
 
         <TextView
             android:id="@+id/tv_description_detail"
-            android:layout_width="match_parent"
+            android:layout_width="375dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/lorem"
-            android:layout_below="@id/img_detail" />
+            android:layout_below="@id/img_detail"
+            android:layout_marginTop="109dp"
+            android:text="@string/lorem" />
 
     </RelativeLayout>
 
