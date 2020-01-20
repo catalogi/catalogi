@@ -8,4 +8,5 @@
     <string name="movies_photo">Movies Photo</string>
     <string name="change_language">Change Language Settings</string>
     <string name="favorite">Favorite</string>
+    <string name="profile">Profile</string>
 </resources>

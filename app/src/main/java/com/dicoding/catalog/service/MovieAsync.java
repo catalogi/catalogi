@@ -11,11 +11,11 @@ import com.dicoding.catalog.repository.Repository;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
-public class LoadMovieAsync extends AsyncTask<Void, Void, ArrayList<Movie>> {
+public class MovieAsync extends AsyncTask<Void, Void, ArrayList<Movie>> {
     private final WeakReference<Repository> weakRepositoryHelper;
     private final WeakReference<LoadDataCallback> weakCallback;
 
-    public LoadMovieAsync (Repository repository, LoadDataCallback callback){
+    public MovieAsync(Repository repository, LoadDataCallback callback){
         this.weakRepositoryHelper = new WeakReference<>(repository);
         this.weakCallback = new WeakReference<>(callback);
     }

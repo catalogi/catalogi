@@ -11,11 +11,11 @@ import com.dicoding.catalog.repository.Repository;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
-public class LoadTvShowAsync extends AsyncTask<Void, Void, ArrayList<Movie>> {
+public class TvShowAsync extends AsyncTask<Void, Void, ArrayList<Movie>> {
     private final WeakReference<Repository> weakRepositoryHelper;
     private final WeakReference<LoadDataCallback> weakCallback;
 
-    public LoadTvShowAsync(Repository repository, LoadDataCallback callback){
+    public TvShowAsync(Repository repository, LoadDataCallback callback){
         weakRepositoryHelper = new WeakReference<>(repository);
         weakCallback = new WeakReference<>(callback);
     }

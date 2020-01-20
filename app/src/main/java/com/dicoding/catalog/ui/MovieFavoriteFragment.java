@@ -13,9 +13,12 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.dicoding.catalog.R;
 import com.dicoding.catalog.adapter.ListMovieAdapter;
+import com.dicoding.catalog.entitas.Movie;
 import com.dicoding.catalog.repository.Repository;
 import com.dicoding.catalog.repository.ImplementRepo;
 import com.dicoding.catalog.service.LoadDataCallback;
+
+import java.util.ArrayList;
 
 public class MovieFavoriteFragment extends Fragment implements LoadDataCallback {
 
@@ -43,4 +46,13 @@ public class MovieFavoriteFragment extends Fragment implements LoadDataCallback 
 
     }
 
+    @Override
+    public void preExecute() {
+
+    }
+
+    @Override
+    public void postExecute(ArrayList<Movie> movies) {
+
+    }
 }

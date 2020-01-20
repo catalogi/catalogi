@@ -30,7 +30,7 @@ public class FavoriteFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle saveInstanceState) {
-        super.onCreateView(view, saveInstanceState);
+        super.onViewCreated(view, saveInstanceState);
 
         ViewPager viewPager = view.findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -42,7 +42,7 @@ public class FavoriteFragment extends Fragment {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new MovieFavoriteFragment(), getString(R.string.movies));
-        adapter.addFragment(new TvShowFavoriteFragment(), getString(R.string.tv_shows));
+
         viewPager.setAdapter(adapter);
     }
 
