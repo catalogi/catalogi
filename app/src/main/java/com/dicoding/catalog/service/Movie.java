@@ -10,7 +10,7 @@ public final class Movie implements Parcelable {
     private String title;
     private String date;
     private String description;
-    private int isFavorite;
+    private int suka;
 
     public Movie(int id, int type, String photo, String title, String date, String description, int isFavorite){
         this.id = id;
@@ -19,7 +19,7 @@ public final class Movie implements Parcelable {
         this.title = title;
         this.date = date;
         this.description = description;
-        this.isFavorite = isFavorite;
+        this.suka = isFavorite;
     }
 
     public int getId(){return id;}
@@ -45,11 +45,11 @@ public final class Movie implements Parcelable {
     }
 
     public int getIsFavorite() {
-        return isFavorite;
+        return suka;
     }
 
     public void setIsFavorite(int isFavorite) {
-        this.isFavorite = isFavorite;
+        this.suka = isFavorite;
     }
 
     @Override
@@ -63,7 +63,7 @@ public final class Movie implements Parcelable {
         dest.writeString(this.title);
         dest.writeString(this.date);
         dest.writeString(this.description);
-        dest.writeInt(this.isFavorite);
+        dest.writeInt(this.suka);
     }
 
     protected Movie (Parcel in){
@@ -73,7 +73,7 @@ public final class Movie implements Parcelable {
         this.title = in.readString();
         this.date = in.readString();
         this.description = in.readString();
-        this.isFavorite = in.readInt();
+        this.suka = in.readInt();
     }
 
     public static final Parcelable.Creator<Movie> CREATOR = new Parcelable.Creator<Movie>(){
