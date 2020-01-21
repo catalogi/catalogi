@@ -1,4 +1,4 @@
-package com.dicoding.catalog.repository;
+package com.dicoding.catalog.repo;
 
 import android.content.ContentValues;
 import android.content.Context;

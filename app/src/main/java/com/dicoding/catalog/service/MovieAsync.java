@@ -6,7 +6,7 @@ import android.os.AsyncTask;
 import com.dicoding.catalog.db.DatabaseContract;
 import com.dicoding.catalog.db.MappingHelper;
 import com.dicoding.catalog.entitas.Movie;
-import com.dicoding.catalog.repository.Repository;
+import com.dicoding.catalog.repo.Repository;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -33,8 +33,8 @@ public class MovieAsync extends AsyncTask<Void, Void, ArrayList<Movie>> {
     }
 
     @Override
-    protected void onPostExecute(ArrayList<Movie> movies){
-        super.onPostExecute(movies);
-        weakCallback.get().postExecute(movies);
+    protected void onPostExecute(ArrayList<Movie> mov){
+        super.onPostExecute(mov);
+        weakCallback.get().postExecute(mov);
     }
 }

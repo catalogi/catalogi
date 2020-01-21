@@ -1,7 +1,7 @@
 package com.dicoding.catalog.db;
 
 public class DatabaseContract {
-    public static String MOVIE_TABLE_NAME="movies";
+    public static String MOVIE_TABLE_NAME="mov";
 
     public static class DatabaseColumns{
         public static String ID ="id";
