@@ -18,11 +18,11 @@ import com.dicoding.catalog.entitas.Movie;
 
 import java.util.ArrayList;
 
-public class ListMovieAdapter extends RecyclerView.Adapter<ListMovieAdapter.ListViewHolder> {
+public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder> {
     private ArrayList<Movie> listMovie;
     private Activity activity;
 
-    public ListMovieAdapter(Activity activity) {
+    public ListAdapter(Activity activity) {
         this.listMovie = new ArrayList<>();
         this.activity = activity;
     }

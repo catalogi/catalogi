@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dicoding.catalog.R;
-import com.dicoding.catalog.adapter.ListMovieAdapter;
+import com.dicoding.catalog.adapter.ListAdapter;
 import com.dicoding.catalog.entitas.Movie;
 import com.dicoding.catalog.repo.Repository;
 import com.dicoding.catalog.repo.ImplementRepo;
@@ -33,7 +33,7 @@ import java.util.Objects;
 @SuppressWarnings("ALL")
 public class MovieFavoriteFragment extends Fragment implements LoadDataCallback {
     private ProgressBar progressBar;
-    private ListMovieAdapter listAdapter;
+    private ListAdapter listAdapter;
     private MovieView MovieView;
 
     public MovieFavoriteFragment(){}
@@ -57,7 +57,7 @@ public class MovieFavoriteFragment extends Fragment implements LoadDataCallback 
         Movie.setLayoutManager(new LinearLayoutManager((view.getContext())));
         Movie.addItemDecoration(new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL));
 
-        ListMovieAdapter listAdapter = new ListMovieAdapter(getActivity());
+        ListAdapter listAdapter = new ListAdapter(getActivity());
         listAdapter.notifyDataSetChanged();
         Movie.setAdapter(listAdapter);
 
