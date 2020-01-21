@@ -1,4 +1,4 @@
-package com.dicoding.catalog.db;
+package com.dicoding.catalog.database;
 
 import android.database.Cursor;
 
