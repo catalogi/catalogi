@@ -3,8 +3,8 @@ package com.dicoding.catalog.service;
 import android.database.Cursor;
 import android.os.AsyncTask;
 
-import com.dicoding.catalog.db.DatabaseContract;
-import com.dicoding.catalog.db.MappingHelper;
+import com.dicoding.catalog.database.DatabaseContract;
+import com.dicoding.catalog.database.MappingHelper;
 import com.dicoding.catalog.entitas.Movie;
 import com.dicoding.catalog.repo.Repository;
 

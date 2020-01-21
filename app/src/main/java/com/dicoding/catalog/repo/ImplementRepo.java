@@ -6,8 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.dicoding.catalog.db.DatabaseContract;
-import com.dicoding.catalog.db.DatabaseHelper;
+import com.dicoding.catalog.database.DatabaseContract;
+import com.dicoding.catalog.database.DatabaseHelper;
 
 public class ImplementRepo implements Repository {
     private static DatabaseHelper databaseHelper;
