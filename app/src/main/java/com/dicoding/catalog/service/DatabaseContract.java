@@ -1,4 +1,4 @@
-package com.dicoding.catalog.database;
+package com.dicoding.catalog.service;
 
 public class DatabaseContract {
     public static String MOVIE_TABLE_NAME="mov";

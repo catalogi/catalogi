@@ -9,8 +9,8 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.dicoding.catalog.BuildConfig;
-import com.dicoding.catalog.entitas.Movie;
-import com.dicoding.catalog.entitas.MovieBuilder;
+import com.dicoding.catalog.service.Movie;
+import com.dicoding.catalog.service.MovieBuilder;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 

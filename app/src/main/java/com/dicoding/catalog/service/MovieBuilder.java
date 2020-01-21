@@ -1,4 +1,4 @@
-package com.dicoding.catalog.entitas;
+package com.dicoding.catalog.service;
 
 public class MovieBuilder {
     private final int id;

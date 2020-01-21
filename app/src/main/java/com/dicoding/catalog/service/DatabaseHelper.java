@@ -1,4 +1,4 @@
-package com.dicoding.catalog.database;
+package com.dicoding.catalog.service;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

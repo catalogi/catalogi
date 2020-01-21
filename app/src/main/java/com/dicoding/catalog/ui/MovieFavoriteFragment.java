@@ -19,10 +19,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dicoding.catalog.R;
-import com.dicoding.catalog.adapter.ListAdapter;
-import com.dicoding.catalog.entitas.Movie;
-import com.dicoding.catalog.repo.Repository;
-import com.dicoding.catalog.repo.ImplementRepo;
+import com.dicoding.catalog.service.ListAdapter;
+import com.dicoding.catalog.service.Movie;
+import com.dicoding.catalog.service.Repository;
+import com.dicoding.catalog.service.ImplementRepo;
 import com.dicoding.catalog.service.LoadDataCallback;
 import com.dicoding.catalog.service.MovieAsync;
 import com.dicoding.catalog.viewmodel.MovieView;

@@ -1,13 +1,10 @@
-package com.dicoding.catalog.repo;
+package com.dicoding.catalog.service;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.dicoding.catalog.database.DatabaseContract;
-import com.dicoding.catalog.database.DatabaseHelper;
 
 public class ImplementRepo implements Repository {
     private static DatabaseHelper databaseHelper;

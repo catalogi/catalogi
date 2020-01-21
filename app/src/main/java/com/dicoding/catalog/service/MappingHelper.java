@@ -1,9 +1,6 @@
-package com.dicoding.catalog.database;
+package com.dicoding.catalog.service;
 
 import android.database.Cursor;
-
-import com.dicoding.catalog.entitas.Movie;
-import com.dicoding.catalog.entitas.MovieBuilder;
 
 import java.util.ArrayList;
 

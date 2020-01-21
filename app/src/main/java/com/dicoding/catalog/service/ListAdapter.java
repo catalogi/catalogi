@@ -1,4 +1,4 @@
-package com.dicoding.catalog.adapter;
+package com.dicoding.catalog.service;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.dicoding.catalog.DetailActivity;
 import com.dicoding.catalog.R;
-import com.dicoding.catalog.entitas.Movie;
 
 import java.util.ArrayList;
 

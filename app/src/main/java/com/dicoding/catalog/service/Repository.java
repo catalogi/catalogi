@@ -1,4 +1,4 @@
-package com.dicoding.catalog.repo;
+package com.dicoding.catalog.service;
 
 import android.content.ContentValues;
 import android.database.Cursor;

@@ -1,4 +1,4 @@
-package com.dicoding.catalog.adapter;
+package com.dicoding.catalog.service;
 
 import android.view.View;
 

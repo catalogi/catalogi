@@ -1,4 +1,4 @@
-package com.dicoding.catalog.entitas;
+package com.dicoding.catalog.service;
 
 import android.os.Parcel;
 import android.os.Parcelable;
