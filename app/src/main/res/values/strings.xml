@@ -9,5 +9,8 @@
     <string name="change_language">Change Language Settings</string>
     <string name="favorite">Favorite</string>
     <string name="profile">Profile</string>
-    <style name="unfavorite">Unfavorite</style>
+    <string name="unfavorite">Unfavorite</string>
+    <string name="nama">Nur Ali Majid</string>
+    <string name="email">nuralimajids@gmail.com </string>
+    <string name="nohp">081541403701</string>
 </resources>

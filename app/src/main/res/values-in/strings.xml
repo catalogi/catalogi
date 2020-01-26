@@ -9,5 +9,9 @@
     <string name="movies_photo">Poster Film</string>
     <string name="change_language">Ubah Bahasa</string>
     <string name="favorite">Favorit</string>
+    <string name="unfavorite">Unfavorite</string>
     <string name="profile">Biodata</string>
+    <string name="nama">Nur Ali Majid</string>
+    <string name="email">nuralimajids@gmail.com </string>
+    <string name="nohp">081541403701</string>
 </resources>

@@ -30,7 +30,7 @@ public class MovieView extends ViewModel {
 
         private static final int TYPE_MOVIE =1;
 
-        public void setMovies(String Language){
+        public void setMovie(String Language){
             String link = BuildConfig.MovieURL + Language;
             final ArrayList<Movie> itemList = new ArrayList<>();
             AsyncHttpClient user = new AsyncHttpClient();
@@ -74,7 +74,7 @@ public class MovieView extends ViewModel {
                     .build();
 
     }
-    public LiveData<ArrayList<Movie>> getMovs(){
+    public LiveData<ArrayList<Movie>> getMov(){
             return listMovs;
     }
 

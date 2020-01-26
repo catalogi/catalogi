@@ -18,7 +18,7 @@
        app:layout_constraintTop_toTopOf="parent">
 
       <androidx.appcompat.widget.Toolbar
-          android:id="@+id/toolbar"
+          android:id="@+id/tool"
           android:layout_width="match_parent"
           android:layout_height="?attr/actionBarSize"
           android:background="?attr/colorPrimary"
@@ -28,7 +28,7 @@
    </com.google.android.material.appbar.AppBarLayout>
 
    <FrameLayout
-       android:id="@+id/container_layout"
+       android:id="@+id/cont_lay"
        android:layout_width="0dp"
        android:layout_height="0dp"
        android:text="@string/title_movies"
@@ -38,7 +38,7 @@
        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
    <com.google.android.material.bottomnavigation.BottomNavigationView
-       android:id="@+id/navigation"
+       android:id="@+id/nav"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
        android:layout_marginStart="0dp"
@@ -47,6 +47,6 @@
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
-       app:menu="@menu/navigation" />
+       app:menu="@menu/nav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

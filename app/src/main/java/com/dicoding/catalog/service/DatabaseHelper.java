@@ -14,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     "%s TEXT NOT NULL," +
                     "%s INTEGER NOT NULL," +
                     "%s TEXT NOT NULL," +
-                    "%s TEXT NOT NUULL," +
+                    "%s TEXT NOT NULL," +
                     "%s TEXT," +
                     "%s INTEGER NOT NULL)",
             DatabaseContract.MOVIE_TABLE_NAME,

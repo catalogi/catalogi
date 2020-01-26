@@ -1,4 +1,4 @@
-package com.dicoding.catalog.ui;
+package com.dicoding.catalog.design;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -30,13 +30,13 @@ import com.dicoding.catalog.viewmodel.MovieView;
 import java.util.ArrayList;
 import java.util.Objects;
 
-@SuppressWarnings("ALL")
-public class MovieFavoriteFragment extends Fragment implements LoadDataCallback {
+
+public class MovFavorite extends Fragment implements LoadDataCallback {
     private ProgressBar progressBar;
     private ListAdapter listAdapter;
     private MovieView MovieView;
 
-    public MovieFavoriteFragment(){}
+    public MovFavorite(){}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,7 +48,7 @@ public class MovieFavoriteFragment extends Fragment implements LoadDataCallback 
     public void onViewCreated(@NonNull View view, @Nullable Bundle saveInstanceState){
         super.onViewCreated(view, saveInstanceState);
 
-        ProgressBar progressBar = view.findViewById(R.id.progressbar_favorite_movie);
+        progressBar = view.findViewById(R.id.progressbar_favorite_movies);
         Repository repository = ImplementRepo.getInstance(view.getContext());
 
         MovieView = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(MovieView.class);
@@ -57,7 +57,7 @@ public class MovieFavoriteFragment extends Fragment implements LoadDataCallback 
         Movie.setLayoutManager(new LinearLayoutManager((view.getContext())));
         Movie.addItemDecoration(new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL));
 
-        ListAdapter listAdapter = new ListAdapter(getActivity());
+        listAdapter = new ListAdapter(getActivity());
         listAdapter.notifyDataSetChanged();
         Movie.setAdapter(listAdapter);
 
@@ -83,29 +83,30 @@ public class MovieFavoriteFragment extends Fragment implements LoadDataCallback 
         Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                loadPage(true);
+                showLoading(true);
             }
         });
 
     }
 
-    private void loadPage(Boolean state) {
-        if (state){
-            progressBar.setVisibility(View.INVISIBLE);
-        }else {
-            progressBar.setVisibility(View.GONE);
-        }
-    }
 
     @Override
     public void postExecute(ArrayList<Movie> mov) {
-        loadPage(false);
+        showLoading(false);
 
         if (mov.size()>0){
             MovieView.setListFavorite(mov);
         }else{
             MovieView.setListFavorite(new ArrayList<Movie>());
             Toast.makeText(getActivity(), "Data Tidak Ditemukan!",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void showLoading(Boolean state) {
+        if (state){
+            progressBar.setVisibility(View.VISIBLE);
+        }else {
+            progressBar.setVisibility(View.GONE);
         }
     }
 }
