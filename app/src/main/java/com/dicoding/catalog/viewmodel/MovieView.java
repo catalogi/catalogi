@@ -25,57 +25,59 @@ import cz.msebera.android.httpclient.Header;
 
 public class MovieView extends ViewModel {
 
-        private MutableLiveData<ArrayList<Movie>> listFavorites = new MutableLiveData<>();
-        private MutableLiveData<ArrayList<Movie>> listMovs = new MutableLiveData<>();
+    private MutableLiveData<ArrayList<Movie>> listFavorites = new MutableLiveData<>();
+    private MutableLiveData<ArrayList<Movie>> listMovs = new MutableLiveData<>();
 
-        private static final int TYPE_MOVIE =1;
+    private static final int TYPE_MOVIE = 1;
 
-        public void setMovie(String Language){
-            String link = BuildConfig.MovieURL + Language;
-            final ArrayList<Movie> itemList = new ArrayList<>();
-            AsyncHttpClient user = new AsyncHttpClient();
-            user.get(link, new AsyncHttpResponseHandler() {
-                @Override
-                public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                    try {
-                        parMov(itemList,responseBody);
-                    }catch (Exception e){
-                        Log.d("Pengecualian", Objects.requireNonNull(e.getMessage()));
-                    }
+    public void setMovie(String Language) {
+        String url = BuildConfig.MovieURL + Language;
+        final ArrayList<Movie> itemList = new ArrayList<>();
+        AsyncHttpClient user = new AsyncHttpClient();
+        user.get(url, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                try {
+                    parMov(itemList, responseBody);
+                } catch (Exception e) {
+                    Log.d("Exception", (e.getMessage()));
                 }
+            }
 
-                @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-                @Override
-                public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    Log.d("Kegagalan", Objects.requireNonNull(error.getMessage()));
-                }
-            });
-        }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                Log.d("OnFailure", (error.getMessage()));
+            }
+        });
+    }
 
     private void parMov(ArrayList<Movie> itemList, byte[] responseBody) throws JSONException {
-        String res = new String (responseBody);
-        JSONObject response =new JSONObject(res);
-        JSONArray listRes= response.getJSONArray("hasil");
-        for (int j =0; j<listRes.length(); j++){
+        String res = new String(responseBody);
+        JSONObject response = new JSONObject(res);
+        JSONArray listRes = response.getJSONArray("results");
+        for (int j = 0; j < listRes.length(); j++) {
             JSONObject items = listRes.getJSONObject(j);
             Movie mov = getMovie(items);
             itemList.add(mov);
         }
-        }
+    listMovs.postValue(itemList);
+    }
 
     private Movie getMovie(JSONObject mItems) throws JSONException {
-            String tempPoster = "https://image.tmdb.org/t/p/w600" + mItems.getString("path_poster");
-            return new MovieBuilder(mItems.getInt("id"), mItems.getString("Judul_Asli"))
-                    .withDate(mItems.getString("tanggal_rilis"))
-                    .withDescription(mItems.getString("deskripsi"))
-                    .withPhoto(tempPoster)
-                    .withType(TYPE_MOVIE)
-                    .withFavorite(0)
-                    .build();
+        String tempPoster = "https://image.tmdb.org/t/p/w600" + mItems.getString("poster_path");
+        return new MovieBuilder(mItems.getInt("id"), mItems.getString("original_title"))
+                .withDate(mItems.getString("release_date"))
+                .withDescription(mItems.getString("Overview"))
+                .withPhoto(tempPoster)
+                .withType(TYPE_MOVIE)
+                .withFavorite(0)
+                .build();
 
     }
-    public LiveData<ArrayList<Movie>> getMov(){
-            return listMovs;
+
+    public LiveData<ArrayList<Movie>> getMov() {
+        return listMovs;
     }
 
     public LiveData<ArrayList<Movie>> getListFavorite() {
@@ -83,6 +85,6 @@ public class MovieView extends ViewModel {
     }
 
     public void setListFavorite(ArrayList<Movie> listFavorite) {
-            this.listFavorites.postValue(listFavorite);
+        this.listFavorites.postValue(listFavorite);
     }
 }
