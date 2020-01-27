@@ -68,7 +68,7 @@ public class MovieView extends ViewModel {
         String tempPoster = "https://image.tmdb.org/t/p/w600" + mItems.getString("poster_path");
         return new MovieBuilder(mItems.getInt("id"), mItems.getString("original_title"))
                 .withDate(mItems.getString("release_date"))
-                .withDescription(mItems.getString("Overview"))
+                .withDescription(mItems.getString("overview"))
                 .withPhoto(tempPoster)
                 .withType(TYPE_MOVIE)
                 .withFavorite(0)
